@@ -1,9 +1,6 @@
 import { memo } from "react";
 import { useWeatherContext } from "../../Context/WeatherContext";
-import { useColdMeasureContext } from "../../Context/ColdMeasuringUnit";
-import { useDistanceMeasureContext } from "../../Context/DistanceUnit";
 import SkeletonDay from "./SkeletonDay";
-import { findCorrectIcon } from "../../utils/utils";
 import Wind from "../Wind";
 import Temp from "../Temp";
 import Hourlydiv from "../Hours/Hourlydiv";

@@ -114,7 +114,7 @@ export function sortApiFailed(): ApiResFormatted {
 }
 
 export function findCorrectIcon(weatherDesc: string| undefined){
-	if(weatherDesc?.toLocaleLowerCase().includes('sun' || 'clear')) return  sunny;
+	if(weatherDesc?.toLocaleLowerCase().includes('sun')) return  sunny;
 	if(weatherDesc?.toLocaleLowerCase().includes('rain')) return rainy
 	if(weatherDesc?.toLocaleLowerCase().includes('snow')) return snowy
 	if(weatherDesc?.toLocaleLowerCase().includes('cloud')) return cloudy

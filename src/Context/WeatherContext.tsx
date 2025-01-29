@@ -16,7 +16,7 @@ export default function WeatherProvider({children}: WeatherChildrenType) {
 	const [fetchedData, setFetchedData] = useState();
 
     return (
-        <WeatherContext.Provider value={{fetchedData, setFetchedData}}>
+        <WeatherContext.Provider value={{fetchedData, setFetchedData} as any}>
             {children}
         </WeatherContext.Provider>
     )
@@ -24,7 +24,7 @@ export default function WeatherProvider({children}: WeatherChildrenType) {
 
 export const useWeatherContext   = (): WeatherContextType => {
 	const context = useContext(WeatherContext);
-	if (context === (undefined || null)) {
+	if (!context ) {
 		// if there is no value the hook is not being called within a function component that is rendered within a `ThemeContext`
 		throw new Error("useThemeContext must be used within App");
 	}

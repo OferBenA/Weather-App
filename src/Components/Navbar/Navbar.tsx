@@ -12,6 +12,7 @@ function Navbar() {
 
 	function handleColdMeasuringUnit() {
 		if (coldMeasuringUnit === "Celsius" && coldMeasureDispatch) {
+			console.log(dayDisplayed)
 			coldMeasureDispatch("Fahrenheit");
 		} else if (coldMeasureDispatch) {
 			coldMeasureDispatch("Celsius");
